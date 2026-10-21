@@ -38,7 +38,9 @@ The report includes subfolders. A folder named Work does not include Work2. Each
 
 ## Install
 
-This source has not been submitted to the community directory. For a local installation, build the product and copy `main.js`, `manifest.json` and `styles.css` into `.obsidian/plugins/task-format-bridge/` in a test vault. Enable the plugin in Community plugins after you reload Obsidian.
+Open Settings, then Community plugins, then Browse, and search for "Task Format Bridge". Select Install, then Enable.
+
+For a manual installation, copy `main.js`, `manifest.json` and `styles.css` from the latest release into `.obsidian/plugins/task-format-bridge/` in your vault. Enable the plugin in Community plugins after you reload Obsidian.
 
 Use Obsidian 1.13.4 or later. Try the commands on a copied note before you migrate working notes. Keep a vault backup for a larger migration. You do not need Tasks or Dataview installed to convert text. Those plugins determine how the resulting fields behave in your workflow.
 
@@ -60,6 +62,8 @@ Fields must form a trailing group before optional tags and a block ID. For examp
 After conversion, choose the matching format in Tasks settings yourself. Task Format Bridge does not read that setting. A folder report is a snapshot of the text read during its scan. Open a fresh report after editing notes when you need current counts.
 
 ## Settings
+
+After a minor or major update, this plugin opens one What's new tab in the background. The tab and settings card suggest other NoteMods plugins and Zovo Chat and link to notemods.com for feedback ([privacy](https://notemods.com/privacy/)). The tab sends no data. Turn the tab off in Settings.
 
 The settings page explains the preview workflow and provides the shared GitHub Sponsors controls. There is no background watcher, automatic conversion switch or default target to maintain. The command you select determines the target for that preview. The folder and format controls in a report apply to that report session.
 

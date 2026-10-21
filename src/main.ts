@@ -4,12 +4,16 @@ import { createGitHubSponsors } from './license/github-obsidian';
 import { convert, MAX_CHARS, type Conversion, type Format } from './convert';
 import { bindPro, isPro, onProChange, resetPro, SPONSORS } from './pro';
 import { TaskFormatBridgeSettingTab } from './settings';
+import { setupHello } from './hello/index';
+import WHATS_NEW from './whats-new.json';
 export interface FileReport { path: string; changes: number; warnings: Conversion['warnings'] }
 export default class TaskFormatBridgePlugin extends Plugin {
  pro: SponsorsManager | null = null;
  private modals = new Set<Modal>();
  private unloaded = false;
  async onload(): Promise<void> {
+  // First: "What's new" reads its state before the settings load (packages/hello). It does not wait.
+  setupHello(this, WHATS_NEW);
   this.unloaded = false;
   const pro = createGitHubSponsors(this.app, this.manifest.id, SPONSORS, this); pro.init(); this.pro = pro; bindPro(pro);
   const tab = new TaskFormatBridgeSettingTab(this.app, this); this.addSettingTab(tab);
