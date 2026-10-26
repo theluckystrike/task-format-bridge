@@ -1,16 +1,9 @@
 {
 	"id": "task-format-bridge",
 	"name": "Task Format Bridge",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"changes": [
-		"New Send feedback command. It opens a page where you can report a problem or suggest an idea.",
-		"Adds free task format previews and conversion.",
-		"Converts Tasks date emoji aliases and nested subtasks."
-	],
-	"changes_user": [
-		"New Send feedback command. It opens a page where you can report a problem or suggest an idea.",
-		"Free preview commands convert the task dates of a note between emoji and Dataview fields.",
-		"Pro adds a folder report that lists the notes with task lines to convert."
+		"The Pro notice for folder migration reports now has a Sponsor on GitHub button."
 	],
 	"tip": "Apply makes one editor change, so one undo in the note restores the previous task text.",
 	"thanks": "Hi, I am Michael, a solo developer in Poland. Task Format Bridge is one of over 100 small plugins that I make. Thank you for using it to keep your tasks in order.",

@@ -2,7 +2,7 @@ import { MarkdownView, Modal, Notice, Plugin, Setting, normalizePath, type Edito
 import type { SponsorsManager } from './license/index';
 import { createGitHubSponsors } from './license/github-obsidian';
 import { convert, MAX_CHARS, type Conversion, type Format } from './convert';
-import { bindPro, isPro, onProChange, resetPro, SPONSORS } from './pro';
+import { bindPro, isPro, onProChange, resetPro, SPONSORS, proNotice } from './pro';
 import { TaskFormatBridgeSettingTab } from './settings';
 import { setupHello } from './hello/index';
 import WHATS_NEW from './whats-new.json';
@@ -22,7 +22,7 @@ export default class TaskFormatBridgePlugin extends Plugin {
    this.addCommand({ id: `preview-${target}`, name: `Preview note as ${target === 'emoji' ? 'emoji fields' : 'Dataview fields'}`, editorCallback: (editor: Editor) => { this.preview(editor, target); } });
   }
   this.addCommand({ id: 'folder-report', name: 'Open folder migration report (pro)', callback: () => {
-   if (!isPro()) { new Notice('Pro adds folder migration reports. Note conversion stays free.'); return; }
+   if (!isPro()) { proNotice('Pro adds folder migration reports. Note conversion stays free.'); return; }
    this.track(new FolderReportModal(this));
   } });
   this.app.workspace.onLayoutReady(() => {
