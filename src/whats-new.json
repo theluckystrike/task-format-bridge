@@ -1,8 +1,9 @@
 {
 	"id": "task-format-bridge",
 	"name": "Task Format Bridge",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"changes": [
+		"The Pro notice of Task Format Bridge now says that one payment turns on Pro in every NoteMods plugin.",
 		"The Pro notice for folder migration reports now has a Sponsor on GitHub button."
 	],
 	"tip": "Apply makes one editor change, so one undo in the note restores the previous task text.",
